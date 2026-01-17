@@ -9,7 +9,7 @@ import jwt
 from functools import wraps
 
 app = Flask(__name__)
-app.secret_key = 'your-secret-key-here-change-in-production'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key')
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 app.config['JWT_SECRET_KEY'] = 'your-jwt-secret-key-change-in-production'
