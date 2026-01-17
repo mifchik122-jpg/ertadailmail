@@ -1204,20 +1204,7 @@ def api_stats(user):
 def get_flashed_messages(with_categories=False):
     return []
 
-if __name__ == '__main__':
-    print("=" * 50)
-    print("ERTADEIL Mail System с API запущена!")
-    print("Доступна по адресу: http://127.0.0.1:5000")
-    print("=" * 50)
-    print("\nДоступные адреса:")
-    print("- Web UI: http://127.0.0.1:5000")
-    print("- API Документация: http://127.0.0.1:5000/api")
-    print("- API Endpoints: http://127.0.0.1:5000/api/*")
-    print("=" * 50)
-    print("\nAPI поддерживает:")
-    print("1. JWT аутентификация")
-    print("2. API ключи")
-    print("3. Отправка/получение писем")
-    print("4. Статистика")
-    print("=" * 50)
-    app.run(debug=True, host='0.0.0.0', port=5000)
+
+if __name__ == "__main__":
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
