@@ -127,6 +127,7 @@ BASE_TEMPLATE = '''
         .tab { margin-left: 20px; }
         .tab2 { margin-left: 40px; }
     </style>
+    <meta name="yandex-verification" content="b6466486e26ed792" />
 </head>
 <body>
     <div class="container">
